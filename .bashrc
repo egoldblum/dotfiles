@@ -1,6 +1,6 @@
 #source other settings
-#NB: .local contains host specific commands, not linked to ~/dotfiles
-for file in ~/.{export,alias,prompt,local}; do
+#NB: .localrc contains host specific commands, not linked to ~/dotfiles
+for file in ~/.{exports,aliases,prompt,localrc}; do
 	[ -r "$file" ] && source "$file"
 done
 unset file
