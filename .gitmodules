@@ -1,6 +1,6 @@
 [submodule ".vim/bundle/jslint.vim"]
 	path = .vim/bundle/jslint.vim
-	url = https://github.com/hallettj/jslint.vim.git
+	url = git://github.com/hallettj/jslint.vim.git
 [submodule ".vim/bundle/minibufexpl.vim"]
 	path = .vim/bundle/minibufexpl.vim
 	url = git://github.com/fholgado/minibufexpl.vim.git
