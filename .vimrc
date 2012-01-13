@@ -64,11 +64,12 @@ autocmd BufNewFile,BufRead ~/olysports/**/*.js setlocal ts=4 sw=4 expandtab
 autocmd BufNewFile,BufRead ~/olysports/**/*.css setlocal ts=4 sw=4 expandtab
 
 "Syntastic
-"let g:syntastic_check_on_open=1
-"let g:syntastic_echo_current_error=1
-"let g:syntastic_enable_signs=1
-"let g:syntastic_enable_balloons=0
-"let g:syntastic_enable_highlighting=1
-"let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_echo_current_error=1
+let g:syntastic_enable_signs=1
+let g:syntastic_enable_balloons=0
+let g:syntastic_enable_highlighting=1
+let g:syntastic_auto_loc_list=1
 "Syntastic jslint conf
-"let g:syntastic_javascript_jslint_conf = "--good"
+"tolerate missing ES5 use strict pragma, assume browser globals
+let g:syntastic_javascript_jslint_conf="--sloppy --browser --indent 4 --predef YUI"
