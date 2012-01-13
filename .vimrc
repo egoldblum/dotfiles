@@ -62,6 +62,8 @@ let $JS_CMD='node'
 "Settings for olympics project
 autocmd BufNewFile,BufRead ~/olysports/**/*.js setlocal ts=4 sw=4 expandtab
 autocmd BufNewFile,BufRead ~/olysports/**/*.css setlocal ts=4 sw=4 expandtab
+"These are really mustache files, not html
+autocmd BufNewFile,BufRead *.mu.html set filetype=mustache
 
 "Syntastic
 let g:syntastic_check_on_open=1
