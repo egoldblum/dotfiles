@@ -75,3 +75,6 @@ let g:syntastic_auto_loc_list=1
 "Syntastic jslint conf
 "tolerate missing ES5 use strict pragma, assume browser globals
 let g:syntastic_javascript_jslint_conf="--sloppy --browser --indent 4 --predef YUI"
+
+"zen coding action key
+let g:user_zen_leader_key="<c-y>"
