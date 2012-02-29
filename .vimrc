@@ -66,15 +66,16 @@ autocmd BufNewFile,BufRead ~/olysports/**/*.css setlocal ts=4 sw=4 expandtab
 autocmd BufNewFile,BufRead *.mu.html set filetype=mustache
 
 "Syntastic
-let g:syntastic_check_on_open=1
+let g:syntastic_check_on_open=0
 let g:syntastic_echo_current_error=1
 let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons=0
 let g:syntastic_enable_highlighting=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html', 'mustache'] }
 "Syntastic jslint conf
 "tolerate missing ES5 use strict pragma, assume browser globals
-let g:syntastic_javascript_jslint_conf="--sloppy --browser --indent 4 --predef YUI"
+let g:syntastic_javascript_jslint_conf="--sloppy --browser --indent 4 --nomen --predef YUI --predef YUITest"
 
 "zen coding action key
 let g:user_zen_leader_key="<c-y>"
