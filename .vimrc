@@ -56,26 +56,25 @@ set autowrite
 autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
-"use node for jslint.vim
-let $JS_CMD='node'
-
-"Settings for olympics project
-autocmd BufNewFile,BufRead ~/olysports/**/*.js setlocal ts=4 sw=4 expandtab
-autocmd BufNewFile,BufRead ~/olysports/**/*.css setlocal ts=4 sw=4 expandtab
-"These are really mustache files, not html
-autocmd BufNewFile,BufRead *.mu.html set filetype=mustache
-
 "Syntastic
-let g:syntastic_check_on_open=0
+let g:syntastic_check_on_open=1
 let g:syntastic_echo_current_error=1
 let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons=0
 let g:syntastic_enable_highlighting=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html', 'mustache'] }
+
+"Syntastic - force jshint usage instead of jslint
+let g:syntastic_javascript_checker='jshint'
+let g:syntastic_javascript_jshint_conf='sub'
+
 "Syntastic jslint conf
 "tolerate missing ES5 use strict pragma, assume browser globals
-let g:syntastic_javascript_jslint_conf="--sloppy --browser --indent 4 --nomen --predef YUI --predef YUITest"
+"let g:syntastic_javascript_jslint_conf="--indent 2 --sloppy --nomen --node --white --vars"
+"use node for jslint.vim
+"let $JS_CMD='node'
+
 
 "zen coding action key
 let g:user_zen_leader_key="<c-y>"

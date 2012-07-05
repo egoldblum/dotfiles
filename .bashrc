@@ -1,3 +1,8 @@
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
 #source other settings
 #NB: .localrc contains host specific commands, not linked to ~/dotfiles
 for file in ~/.{exports,aliases,prompt,localrc}; do
