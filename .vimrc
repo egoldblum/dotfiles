@@ -55,9 +55,10 @@ set autowrite
 "Force these spacing settings based on file type 
 autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 "Syntastic
-let g:syntastic_check_on_open=1
+let g:syntastic_check_on_open=0
 let g:syntastic_echo_current_error=1
 let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons=0
@@ -67,7 +68,6 @@ let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_
 
 "Syntastic - force jshint usage instead of jslint
 let g:syntastic_javascript_checker='jshint'
-let g:syntastic_javascript_jshint_conf='sub'
 
 "Syntastic jslint conf
 "tolerate missing ES5 use strict pragma, assume browser globals
