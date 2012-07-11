@@ -1,4 +1,6 @@
 {
-	"sub": true,
-	"undef": true
+	"sub": false,
+	"undef": true,
+	"node": true,
+	"strict": false
 }
