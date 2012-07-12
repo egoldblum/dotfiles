@@ -78,3 +78,6 @@ let g:syntastic_javascript_checker='jshint'
 
 "zen coding action key
 let g:user_zen_leader_key="<c-y>"
+
+"make xterm title inherit from vim
+set title

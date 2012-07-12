@@ -2,5 +2,8 @@
 	"sub": false,
 	"undef": true,
 	"node": true,
-	"strict": false
+	"strict": false,
+	"trailing": true,
+	"noempty": true,
+	"latedef": true
 }
