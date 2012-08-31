@@ -63,7 +63,7 @@ autocmd FileType scss setlocal ts=2 sts=2 sw=2 expandtab
 au! BufRead,BufNewFile *.scss setfiletype scss
 
 "Syntastic
-let g:syntastic_check_on_open=0
+let g:syntastic_check_on_open=1
 let g:syntastic_echo_current_error=1
 let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons=0
@@ -86,3 +86,6 @@ let g:user_zen_leader_key="<c-y>"
 
 "make xterm title inherit from vim
 set title
+
+"turn on color column at column 81 (1 past the 80 col limit)
+set colorcolumn=81
