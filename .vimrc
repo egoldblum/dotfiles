@@ -89,3 +89,7 @@ set title
 
 "turn on color column at column 81 (1 past the 80 col limit)
 set colorcolumn=81
+
+"ctags accessible via f8
+nmap <F8> :TagbarToggle<CR>
+
