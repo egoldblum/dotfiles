@@ -58,6 +58,7 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType scss setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 
 "scss files are scss
 au! BufRead,BufNewFile *.scss setfiletype scss
@@ -86,6 +87,9 @@ let g:user_zen_leader_key="<c-y>"
 
 "make xterm title inherit from vim
 set title
+"make iterm title inherit from vim
+set t_ts=]1;
+set t_fs=
 
 "turn on color column at column 81 (1 past the 80 col limit)
 set colorcolumn=81
