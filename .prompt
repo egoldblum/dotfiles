@@ -1,3 +1,5 @@
+source ~/.git-prompt.sh
+
 BRIGHT=1
 
 FG_BLACK=30
@@ -62,5 +64,5 @@ PROMPT_COMMAND='export ERR=$?'
 
 #prompt
 if [ -n "$PS1" ]; then
-  PS1="${BRIGHT_RED}\u${NORMAL}@${BRIGHT_BLUE}\h${NORMAL}(\t):${BRIGHT_CYAN}\w${NORMAL}\$ "
+  PS1="${BRIGHT_RED}\u${NORMAL}@${BRIGHT_BLUE}\h${NORMAL}(\t):${BRIGHT_CYAN}\w${VIOLET}\$(__git_ps1)${NORMAL}\$ "
 fi
