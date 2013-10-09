@@ -97,3 +97,8 @@ set colorcolumn=81
 "ctags accessible via f8
 nmap <F8> :TagbarToggle<CR>
 
+"string trailing whitespace in js on save
+autocmd BufWritePre *.js :%s/\s\+$//e
+autocmd BufWritePre *.avsc :%s/\s\+$//e
+
+
