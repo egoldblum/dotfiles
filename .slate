@@ -1,0 +1,32 @@
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
+
+bind return:shift;cmd ${full}
+bind left:shift;cmd push left 
+bind left:shift;ctrl;cmd move screenOriginX;screenOriginY screenSizeX/2;screenSizeY 
+bind right:shift;cmd push right 
+bind right:shift;ctrl;cmd move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY 
+bind up:shift;cmd push up 
+bind up:shift;ctrl;cmd move screenOriginX;screenOriginY screenSizeX;screenSizeY/2
+bind down:shift;cmd push down 
+bind down:shift;ctrl;cmd move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
+
+# window switcher
+bind tab:cmd switch
+bind c:shift;cmd show 'Google Chrome'
+
+# window hints
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+config windowHintsSpread true
+bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN
+
+# move to screen 
+bind 1:alt,ctrl throw 0 resize
+bind 2:alt,ctrl throw 1 resize
