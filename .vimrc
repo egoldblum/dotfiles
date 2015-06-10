@@ -73,19 +73,7 @@ let g:syntastic_enable_balloons=0
 let g:syntastic_enable_highlighting=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html', 'mustache'] }
-
-"Syntastic - force jshint usage instead of jslint
-let g:syntastic_javascript_checker='jshint'
-
-"Syntastic jslint conf
-"tolerate missing ES5 use strict pragma, assume browser globals
-"let g:syntastic_javascript_jslint_conf="--indent 2 --sloppy --nomen --node --white --vars"
-"use node for jslint.vim
-"let $JS_CMD='node'
-
-
-"zen coding action key
-let g:user_zen_leader_key="<c-y>"
+let g:syntastic_javascript_checkers=['eslint']
 
 "make xterm title inherit from vim
 set title
