@@ -55,7 +55,7 @@ set autowrite
 "Force these spacing settings based on file type 
 autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType scss setlocal ts=2 sts=2 sw=2 expandtab
@@ -72,8 +72,9 @@ let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons=0
 let g:syntastic_enable_highlighting=1
 let g:syntastic_auto_loc_list=1
-let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html', 'mustache'] }
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['mustache'] }
 let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_html_checkers=['']
 
 "make xterm title inherit from vim
 set title
@@ -90,5 +91,7 @@ nmap <F8> :TagbarToggle<CR>
 "string trailing whitespace in js on save
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.avsc :%s/\s\+$//e
+autocmd BufWritePre *.html :%s/\s\+$//e
 
-
+"use system clipboard by default
+set clipboard=unnamed
