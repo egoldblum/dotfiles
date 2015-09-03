@@ -61,6 +61,7 @@ autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType scss setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType less setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType cpp setlocal ts=2 sts=2 sw=2 expandtab
 
 "scss files are scss
 au! BufRead,BufNewFile *.scss setfiletype scss
@@ -74,6 +75,7 @@ let g:syntastic_enable_highlighting=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['mustache'] }
 let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_javascript_eslint_args = "--rulesdir /Users/egoldblum/workpop/Workpop-web/tests/scripts/eslint_rules"
 let g:syntastic_html_checkers=['']
 
 "make xterm title inherit from vim
@@ -91,7 +93,17 @@ nmap <F8> :TagbarToggle<CR>
 "string trailing whitespace in js on save
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.avsc :%s/\s\+$//e
+autocmd BufWritePre *.cc :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
 
 "use system clipboard by default
 set clipboard=unnamed
+
+" magic eslint rules dir injection
+" http://stackoverflow.com/questions/29228575/how-to-specify-custom-rulesdir-for-eslint-in-vim-editor
+" let g:syntastic_debug=3
+" function! ESLintArgs()
+" 	let rules = finddir('eslint_rules', './**')
+" 	return rules != '' ? '--rulesdir ' . rules : ''
+" endfunction
+" autocmd FileType javascript let b:syntastic_javascript_eslint_args = ESLintArgs()
