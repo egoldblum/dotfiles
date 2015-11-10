@@ -67,17 +67,20 @@ autocmd FileType cpp setlocal ts=2 sts=2 sw=2 expandtab
 au! BufRead,BufNewFile *.scss setfiletype scss
 
 "Syntastic
-let g:syntastic_check_on_open=1
 let g:syntastic_echo_current_error=1
 let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons=0
 let g:syntastic_loc_list_height=5
 let g:syntastic_enable_highlighting=1
 let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['mustache'] }
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_javascript_eslint_args = "--rulesdir /Users/egoldblum/workpop/Workpop-web/tests/scripts/eslint_rules"
 let g:syntastic_html_checkers=['']
+let g:syntastic_check_on_wq=0
+
 
 "make xterm title inherit from vim
 set title
