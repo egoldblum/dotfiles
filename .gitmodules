@@ -1,9 +1,6 @@
 [submodule ".vim/bundle/jslint.vim"]
 	path = .vim/bundle/jslint.vim
 	url = git://github.com/hallettj/jslint.vim.git
-[submodule ".vim/bundle/mustache"]
-	path = .vim/bundle/mustache
-	url = git://github.com/juvenn/mustache.vim.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
@@ -61,6 +58,3 @@
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule "bundle/mustache"]
-	path = bundle/mustache
-	url = git://github.com/mustache/vim-mustache-handlebars.git
