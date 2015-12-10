@@ -81,6 +81,10 @@ let g:syntastic_javascript_eslint_args = "--rulesdir /Users/egoldblum/workpop/Wo
 let g:syntastic_html_checkers=['']
 let g:syntastic_check_on_wq=0
 
+"Airline
+" let g:airline#extensions#tabline#enabled = 1
+
+
 
 "make xterm title inherit from vim
 set title
@@ -111,3 +115,6 @@ set clipboard=unnamed
 " 	return rules != '' ? '--rulesdir ' . rules : ''
 " endfunction
 " autocmd FileType javascript let b:syntastic_javascript_eslint_args = ESLintArgs()
+
+" Mustachify!
+let g:mustache_abbreviations = 1

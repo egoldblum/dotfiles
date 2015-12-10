@@ -18,8 +18,8 @@ bind down:shift;cmd push down
 bind down:shift;ctrl;cmd move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX;screenSizeY/2
 
 # window switcher
-bind tab:cmd switch
-bind c:shift;cmd show 'Google Chrome'
+# bind tab:cmd switch
+# bind c:shift;cmd show 'Google Chrome'
 
 # window hints
 config windowHintsShowIcons true
