@@ -77,7 +77,7 @@ let g:syntastic_check_on_open=1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['mustache'] }
 let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_javascript_eslint_args = "--rulesdir /Users/egoldblum/workpop/Workpop-web/tests/scripts/eslint_rules"
+let g:syntastic_javascript_eslint_args = "--ext .js,.jsx --rulesdir /Users/egoldblum/workpop/Workpop-web/tests/scripts/eslint_rules --cache"
 let g:syntastic_html_checkers=['']
 let g:syntastic_check_on_wq=0
 
@@ -100,9 +100,11 @@ nmap <F8> :TagbarToggle<CR>
 
 "string trailing whitespace in js on save
 autocmd BufWritePre *.js :%s/\s\+$//e
+autocmd BufWritePre *.jsx :%s/\s\+$//e
 autocmd BufWritePre *.avsc :%s/\s\+$//e
 autocmd BufWritePre *.cc :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
+autocmd BufWritePre *.less :%s/\s\+$//e
 
 "use system clipboard by default
 set clipboard=unnamed
