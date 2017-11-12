@@ -62,7 +62,16 @@ REV_RED="\[$ESC[${DULL};${FG_YELLOW}; ${BG_RED}m\]"
 
 PROMPT_COMMAND='export ERR=$?'
 
+__kube_ps1()
+{
+  CONTEXT=$(kubectl config current-context)
+  NS=$(kubectl config view -o jsonpath="{.contexts[?(@.name==\"$CONTEXT\")].context.namespace}")
+  if [ -n "$CONTEXT" ]; then
+      echo "[${CONTEXT}][${NS}]"
+  fi
+}
+
 #prompt
 if [ -n "$PS1" ]; then
-  PS1="${BRIGHT_RED}\u${NORMAL}@${BRIGHT_BLUE}\h${NORMAL}(\t):${BRIGHT_CYAN}\w${VIOLET}\$(__git_ps1)${NORMAL}\$ "
+  PS1="${BRIGHT_RED}\u${NORMAL}@${BRIGHT_BLUE}\h${NORMAL}(\t):${BRIGHT_CYAN}\w${VIOLET}\$(__git_ps1)${NORMAL}${BRIGHT_WHITE}\$(__kube_ps1)${NORMAL}\$ "
 fi
