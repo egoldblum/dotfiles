@@ -19,5 +19,3 @@ shopt -s checkwinsize
 
 #append instead of overwrite to history file on exit
 shopt -s histappend
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
