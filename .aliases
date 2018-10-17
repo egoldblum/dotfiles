@@ -2,3 +2,4 @@
 alias ls="ls -CF"
 alias sl="ls"
 alias la="ls -Al"
+alias gs="git status"

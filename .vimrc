@@ -105,6 +105,8 @@ autocmd BufWritePre *.avsc :%s/\s\+$//e
 autocmd BufWritePre *.cc :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.less :%s/\s\+$//e
+autocmd BufWritePre *.graphql :%s/\s\+$//e
+autocmd BufWritePre *.yaml :%s/\s\+$//e
 
 "use system clipboard by default
 set clipboard=unnamed
