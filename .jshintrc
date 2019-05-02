@@ -1,9 +1,0 @@
-{
-	"sub": false,
-	"undef": true,
-	"node": true,
-	"strict": false,
-	"trailing": true,
-	"noempty": true,
-	"latedef": true
-}
