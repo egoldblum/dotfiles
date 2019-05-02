@@ -64,9 +64,9 @@ PROMPT_COMMAND='export ERR=$?'
 
 __kube_ps1()
 {
-  CONTEXT=$(kubectl config current-context)
-  NS=$(kubectl config view -o jsonpath="{.contexts[?(@.name==\"$CONTEXT\")].context.namespace}")
+  CONTEXT=$(2>/dev/null kubectl config current-context)
   if [ -n "$CONTEXT" ]; then
+      NS=$(kubectl config view -o jsonpath="{.contexts[?(@.name==\"$CONTEXT\")].context.namespace}")
       echo "[${CONTEXT}][${NS}]"
   fi
 }
