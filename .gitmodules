@@ -58,6 +58,3 @@
 [submodule ".vim/bundle/vim-spacebars"]
 	path = .vim/bundle/vim-spacebars
 	url = git://github.com/Slava/vim-spacebars.git
-[submodule ".vim/bundle/syntastic-local-eslint.vim"]
-	path = .vim/bundle/syntastic-local-eslint.vim
-	url = https://github.com/mtscout6/syntastic-local-eslint.vim.git

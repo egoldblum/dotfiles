@@ -1,5 +1,5 @@
 "load pathogen runtime
-call pathogen#infect()
+execute pathogen#infect()
 
 "turn off vi compatiblity so that powerline will work
 set nocompatible 
@@ -77,7 +77,6 @@ let g:syntastic_check_on_open=1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['mustache'] }
 let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_javascript_eslint_args = "--ext .js,.jsx --rulesdir /Users/egoldblum/workpop/Workpop-web/tests/scripts/eslint_rules --cache"
 let g:syntastic_html_checkers=['']
 let g:syntastic_check_on_wq=0
 
