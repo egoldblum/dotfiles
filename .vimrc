@@ -1,11 +1,8 @@
 packloadall
 silent! helptags ALL
 
-"load pathogen runtime
-execute pathogen#infect()
-
 "turn off vi compatiblity so that powerline will work
-set nocompatible 
+set nocompatible
 
 "turn on syntax highlighting
 syntax enable
@@ -23,10 +20,10 @@ filetype plugin indent on
 "how many characters widths are indented with >> or autoindent
 set shiftwidth=4
 
-"how many characters widths tabs are displayed as 
+"how many characters widths tabs are displayed as
 set tabstop=4
 
-"how many characters widths are indented when hitting tab in insert mode 
+"how many characters widths are indented when hitting tab in insert mode
 set softtabstop=4
 
 "hitting tab will insert spaces
@@ -40,7 +37,7 @@ set laststatus=2
 set showcmd
 "shows line and column number and percentage thru file in status line
 set ruler
-"shows line numbers inline 
+"shows line numbers inline
 set number
 "THE PREVIOUS RULES ARE SUBSUMED BY POWERLINE
 
@@ -55,7 +52,7 @@ set incsearch
 "automatically write a buffer when switching buffers
 set autowrite
 
-"Force these spacing settings based on file type 
+"Force these spacing settings based on file type
 autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
@@ -86,19 +83,6 @@ set t_fs=
 
 "turn on color column at column 81 (1 past the 80 col limit)
 set colorcolumn=81
-
-"ctags accessible via f8
-nmap <F8> :TagbarToggle<CR>
-
-"string trailing whitespace in js on save
-autocmd BufWritePre *.js :%s/\s\+$//e
-autocmd BufWritePre *.jsx :%s/\s\+$//e
-autocmd BufWritePre *.avsc :%s/\s\+$//e
-autocmd BufWritePre *.cc :%s/\s\+$//e
-autocmd BufWritePre *.html :%s/\s\+$//e
-autocmd BufWritePre *.less :%s/\s\+$//e
-autocmd BufWritePre *.graphql :%s/\s\+$//e
-autocmd BufWritePre *.yaml :%s/\s\+$//e
 
 "use system clipboard by default
 set clipboard=unnamed

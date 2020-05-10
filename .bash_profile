@@ -11,3 +11,4 @@ if [ -f '/Users/egoldblum/google-cloud-sdk/path.bash.inc' ]; then . '/Users/egol
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/egoldblum/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/egoldblum/google-cloud-sdk/completion.bash.inc'; fi
+export PATH="/usr/local/opt/node@10/bin:$PATH"
